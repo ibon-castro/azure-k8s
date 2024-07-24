@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: iboncastroazureks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: iboncastroazureks
+  template:
+    metadata:
+      labels:
+        app: iboncastroazureks 
+    spec:
+      containers:
+        - name: iboncastroazureks 
+          image: iboncasecr.azurecr.io/iboncastroazureks
+          ports:
+          - containerPort: 8080
