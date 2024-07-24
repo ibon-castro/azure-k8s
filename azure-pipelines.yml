@@ -80,7 +80,6 @@ stages:
 
   - deployment: DeployPullRequest
     displayName: Deploy Pull request
-    condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/pull/'))
     pool: Default
 
     environment: 'iboncastroazurek8s.$(k8sNamespaceForPR)'
